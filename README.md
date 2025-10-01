@@ -11,9 +11,10 @@ let focus = "Math Research & Math Softwares";
 let interests = ["Open Source", "Data Visualization", "AI Research"];
 ```
 ## Projects
+```js
 [hyperstructures()](https://github.com/enh11/hypercompositional_structures)
 // Rust library for hypercompositional algebra
-
+```js
 $$\circ : H\times H\to P(H)$$
 
 ## Contact
