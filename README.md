@@ -16,13 +16,13 @@ Rust library for hypercompositional algebra
 $$\circ : H\times H\to P(H)$$
 
 ## Contact
-// You can reach me here:
+**You can reach me here**:
 
-const email   = "[etalotti@ung.si](mailto:etalotti@ung.si)"
+**email** = [etalotti@ung.si](mailto:etalotti@ung.si)
 
-const github  = "[github.com/janedoe](https://github.com/janedoe)"
+**github** = [github.com/enh11](https://github.com/enh11)
 
-const linkedin = "[linkedin.com/in/janedoe](https://linkedin.com/in/janedoe)"
+
 
 
 
