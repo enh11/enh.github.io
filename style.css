@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Base Styles - Desktop first */
 body {
   margin: 0;
   font-family: 'Fira Code', monospace;
@@ -13,20 +13,23 @@ a:hover { text-decoration: underline; }
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  background-color: #000000; /* black on sides */
 }
 
 .wrapper {
-  display: flex;
+  display: flex; /* desktop: sidebar left, main right */
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px; /* optional: limits max page width */
 }
 
-/* Sidebar / Navigation */
+/* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 220px;           /* full left sidebar width */
   background-color: #001100;
   padding: 2rem 1rem;
   border-right: 1px solid #002200;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar h2 {
@@ -40,13 +43,13 @@ a:hover { text-decoration: underline; }
   padding-left: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* vertical links on desktop */
   gap: 1rem;
 }
 
 .sidebar li { margin: 0; }
 
-/* Main Content */
+/* Main content */
 .main {
   flex: 1;
   padding: 2rem;
@@ -70,7 +73,6 @@ a:hover { text-decoration: underline; }
 
 .code-line { margin: 0.2rem 0; }
 
-/* Syntax highlighting */
 .keyword { color: #33aa33; font-weight: bold; }
 .string { color: #55cc55; }
 .comment { color: #225522; font-style: italic; }
@@ -86,7 +88,6 @@ a:hover { text-decoration: underline; }
   text-shadow: 0 0 6px #55ff55;
 }
 
-/* Math styling */
 .math {
   background-color: #001100;
   border: 1px solid #002200;
@@ -104,39 +105,16 @@ footer {
   margin-top: 3rem;
 }
 
-/* Base: desktop */
-.wrapper {
-  display: flex; /* sidebar left, main right */
-  width: 100%;
-  max-width: 800px;
-}
-
-.sidebar {
-  width: 220px;
-  background-color: #001100;
-  padding: 2rem 1rem;
-  border-right: 1px solid #002200;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar ul {
-  display: flex;
-  flex-direction: column; /* vertical links */
-  gap: 1rem;
-}
-
-/* Responsive: move sidebar to top for mobile/tablet */
+/* Responsive: tablet & mobile */
 @media (max-width: 768px) {
   .wrapper {
-    flex-direction: column; /* stack navbar on top, main below */
-    align-items: center;    /* center both sidebar and main */
-        padding: 1rem 1rem;
-
+    flex-direction: column; /* stack navbar on top */
+    align-items: center;    /* center sidebar and main */
+    padding: 1rem;
   }
 
   .sidebar {
-    width: 100%;            /* fill the wrapper width */
+    width: 100%;            /* full wrapper width */
     max-width: 800px;       /* same as main content */
     flex-direction: row;    /* horizontal links */
     justify-content: center;
@@ -148,8 +126,7 @@ footer {
   .sidebar h2 { display: none; }
 
   .sidebar ul {
-    display: flex;
-    flex-direction: row;
+    flex-direction: row;    /* horizontal links */
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
@@ -161,7 +138,19 @@ footer {
 
   .main {
     width: 100%;
-    max-width: 800px; /* match the navbar width */
+    max-width: 800px;      /* same width as sidebar */
     padding: 1rem;
   }
+
+  .section-title { font-size: 1.2rem; }
+  .math { font-size: 1rem; }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  body { font-size: 0.9rem; }
+  .section-title { font-size: 1.1rem; }
+  .code-box { padding: 0.8rem; font-size: 0.85rem; }
+  .math { font-size: 0.9rem; padding: 0.8rem; }
+  .sidebar ul { gap: 0.8rem; }
 }
