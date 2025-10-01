@@ -4,17 +4,15 @@
 ---
 
 ## About Me
-```rust
-// Mathematician | Rust Developer
-let name = "Dr. Enrico Talotti";
-let focus = "Math Research & Math Softwares";
-let interests = ["Open Source", "Data Visualization", "AI Research"];
-```
+
+
+**Dr. Enrico Talotti**
+blablabla
 ## Projects
-```js
+
 [hyperstructures()](https://github.com/enh11/hypercompositional_structures)
-// Rust library for hypercompositional algebra
-```js
+Rust library for hypercompositional algebra
+
 $$\circ : H\times H\to P(H)$$
 
 ## Contact
