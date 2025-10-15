@@ -2,7 +2,7 @@
 body {
   background-color: #000000; /* deep black */
   padding: 50px;
-  font: 14px/1.5 'Fira Code', monospace;
+  font: 14px/1.5 'Fira Code', Consolas, 'Courier New', monospace;
   color: #33aa33; /* soft green text */
   font-weight: 400;
 }
@@ -48,6 +48,7 @@ h3, h4, h5, h6 { font-weight: 500; }
   color: #ccffcc;
   text-shadow: 0 0 6px #55ff55;
 }
+
 /* --- End content-box --- */
 
 
@@ -182,6 +183,18 @@ header ul a strong {
   margin-bottom: 2rem;
   color: #225522; 
   font-style: italic;
+}
+/* Hover effect */
+.code-box:hover {
+
+  border-color: #33aa33;
+
+  transform: translateY(-2px);
+  /* Glowing shadow behind */
+  box-shadow: 
+    0 0 10px rgba(51, 170, 51, 0.5), 
+    0 0 20px rgba(51, 170, 51, 0.3), 
+    0 0 30px rgba(51, 170, 51, 0.2);
 }
 /* .code-line { margin: 0.2rem 0; }
 
